@@ -177,6 +177,20 @@
     <dimen name="ll_checkout_place_order_padding">16dp</dimen>
     <dimen name="ll_checkout_items_receipt">16dp</dimen>
 
+    <dimen name="my_order_details_content_marginStartEnd">16dp</dimen>
+    <dimen name="my_order_details_content_marginTopBottom">10dp</dimen>
+    <dimen name="my_order_details_content_lbl_padding">2dp</dimen>
+    <dimen name="my_order_details_lbl_textSize">14sp</dimen>
+    <dimen name="my_order_details_status_paddingStartEnd">10dp</dimen>
+    <dimen name="my_order_details_status_paddingTopBottom">2dp</dimen>
+    <dimen name="lbl_order_details_textSize">16sp</dimen>
+    <dimen name="my_order_details_content_paddingStartEnd">16dp</dimen>
+    <dimen name="my_order_details_content_paddingTopBottom">10dp</dimen>
+    <dimen name="my_order_details_items_receipt">16dp</dimen>
+    <dimen name="my_order_details_label_value_textSize">18sp</dimen>
+
+
+
 
 
     <dimen name="sold_details_content_marginStartEnd">16dp</dimen>

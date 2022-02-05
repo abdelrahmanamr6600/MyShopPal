@@ -8,7 +8,9 @@ import android.provider.MediaStore
 import android.webkit.MimeTypeMap
 
 object Constants {
+
     const val Users :String = "users"
+    const val SELLER_ID = "sellerId"
     const val Products:String = "products"
     const val myShopPreferences : String = "MyShopPref"
     const val Logged_In_Username  = "Logged_in_username"
@@ -42,6 +44,10 @@ object Constants {
     const val Add_Address_REQUEST_CODE:Int = 121
      const val ORDERS:String = "orders"
     const val STOCK_QUANTITY:String = "stock_quantity"
+    const val EXTRA_MY_ORDER_DETAILS: String = "extra_my_order_details"
+    const val SOLD_PRODUCTS: String = "sold_products"
+    const val EXTRA_SOLD_PRODUCT_DETAILS: String = "extra_sold_product_details"
+
 
     fun showImageChooser(activity:Activity)
     {

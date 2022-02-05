@@ -118,6 +118,7 @@ class AddProductActivity : BaseActivity() {
             userName!!,
             title,
             price,
+            FirestoreClass().getCurrentUser(),
             description,
             stockQuantity,
             mProductImageUrl

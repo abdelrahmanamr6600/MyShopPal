@@ -93,6 +93,7 @@ class ProductDetailsActivity : BaseActivity() {
             mProductDetails.title,
             mProductDetails.price,
             mProductDetails.image,
+            mProductDetails.sellerId,
             Constants.DEFAULT_CART_QUANTITY
         ,mProductDetails.stock_quantity
         )

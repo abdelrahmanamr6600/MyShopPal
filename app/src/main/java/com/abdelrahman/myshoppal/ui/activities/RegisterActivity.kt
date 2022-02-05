@@ -65,6 +65,7 @@ class RegisterActivity : BaseActivity() {
 
 
            }.addOnFailureListener {
+               hideDialog()
                Toast.makeText(this,"error",Toast.LENGTH_LONG).show()
            }
     }
