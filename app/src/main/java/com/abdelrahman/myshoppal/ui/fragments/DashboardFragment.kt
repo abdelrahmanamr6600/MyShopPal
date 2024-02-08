@@ -19,6 +19,7 @@ class DashboardFragment : BaseFragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
+        getProductsFromFireStore()
     }
 
     override fun onCreateView(
@@ -37,12 +38,6 @@ class DashboardFragment : BaseFragment() {
         super.onCreateOptionsMenu(menu, inflater)
     }
 
-    override fun onResume() {
-        super.onResume()
-        getProductsFromFireStore()
-
-
-    }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId

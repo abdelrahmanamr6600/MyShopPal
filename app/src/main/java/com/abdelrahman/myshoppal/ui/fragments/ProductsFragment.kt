@@ -17,21 +17,12 @@ import kotlinx.android.synthetic.main.fragment_products.*
 
 class ProductsFragment : BaseFragment() {
 
-    //private lateinit var homeViewModel: HomeViewModel
-    var productsListt : ArrayList<Product> = ArrayList()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
-        Log.d("ppp",productsListt.size.toString())
-    }
-
-    override fun onResume() {
-        super.onResume()
         getProductsFromFireStore()
-
-
     }
+
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
@@ -39,9 +30,6 @@ class ProductsFragment : BaseFragment() {
     ): View? {
         //homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_products, container, false)
-
-
-
         return root
 
 
@@ -68,7 +56,8 @@ class ProductsFragment : BaseFragment() {
         return super.onOptionsItemSelected(item)
     }
     private  fun getProductsFromFireStore(){
-        showProgressBar("pleas Wait")
+        showProgressBar("please wait")
+
         FirestoreClass().getProductsList(this)
 
     }
@@ -94,7 +83,7 @@ class ProductsFragment : BaseFragment() {
     }
 
      fun successProductsFromFireStore(productsList:ArrayList<Product>){
-        hideDialog()
+         hideDialog()
          if (productsList.size>0)
          {
              rv_my_product_items.visibility = View.VISIBLE

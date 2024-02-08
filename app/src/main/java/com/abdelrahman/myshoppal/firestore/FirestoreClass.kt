@@ -149,11 +149,11 @@ class FirestoreClass {
             }
             .addOnFailureListener {
                 activity.hideDialog()
-                Toast.makeText(activity.applicationContext,"Error",Toast.LENGTH_LONG).show()
+                Toast.makeText(activity.applicationContext,it.message.toString(),Toast.LENGTH_LONG).show()
             }
     }
 
-    fun getProductsList(fragment:Fragment){
+    fun getProductsList(fragment:ProductsFragment){
         mFireStore.collection(Constants.Products)
             .whereEqualTo(Constants.USER_ID,getCurrentUser())
             .get().addOnSuccessListener  { document ->
@@ -173,7 +173,7 @@ class FirestoreClass {
             }
     }
 
-    fun getDashboardItems(fragment: Fragment){
+    fun getDashboardItems(fragment: DashboardFragment){
         mFireStore.collection(Constants.Products)
                 .get()
                 .addOnSuccessListener {document ->
@@ -192,7 +192,11 @@ class FirestoreClass {
                         }
                     }
 
-                }
+                }.addOnFailureListener{
+                fragment.hideDialog()
+            }
+
+
     }
 
     fun deleteProduct(fragment:ProductsFragment,product_id:String){
