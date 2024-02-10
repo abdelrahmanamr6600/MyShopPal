@@ -33,18 +33,18 @@ class OrdersFragment : BaseFragment() {
     }
 
     fun populateOrdersListinUi(ordersList:ArrayList<Order>){
-        hideDialog()
         if (ordersList.size > 0){
             tv_no_orders_found.visibility = View.GONE
             rv_my_order_items.visibility = View.VISIBLE
-
+            hideDialog()
         }
-        var adapter = OrdersListAdapter(this.requireContext(),ordersList)
+        else{
+            hideDialog()
+        }
+        val adapter = OrdersListAdapter(this.requireContext(),ordersList)
         rv_my_order_items.layoutManager = LinearLayoutManager(activity)
         rv_my_order_items.setHasFixedSize(true)
         rv_my_order_items.adapter = adapter
-
-
     }
 
     private fun getMyOrdersList(){

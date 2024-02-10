@@ -39,8 +39,6 @@ open class BaseFragment : Fragment() {
     fun hideDialog()
     {
         mProgressBar.cancel()
-       Log.d("dismiss","running")
-
     }
 
 }
